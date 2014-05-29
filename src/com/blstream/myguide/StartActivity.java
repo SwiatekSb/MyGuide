@@ -341,7 +341,10 @@ public class StartActivity extends FragmentActivity implements NavigationConfirm
 				newFragment = new GastronomyListFragment();
 				tag = BundleConstants.FRAGMENT_GASTRONOMY;
 				break;
-
+            case 6:
+                newFragment = new PreferencesFragment();
+                tag = BundleConstants.FRAGMENT_PREFERENCES;
+                break;
 			default:
 				break;
 		}

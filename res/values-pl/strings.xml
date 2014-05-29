@@ -113,6 +113,14 @@
 	<!-- History -->
     <string name="history_list_title">Historia</string>
 
+    <string name="preferences_title">Preferencje</string>
+    <string name="preferences_language">Język</string>
+    <string-array name="languages">
+        <item name="english">Angielski</item>
+        <item name="polish">Polski</item>
+    </string-array>
+
+
     <string name="more_info">więcej</string>
 
 </resources>
