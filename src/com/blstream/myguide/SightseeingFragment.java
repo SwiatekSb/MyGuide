@@ -407,7 +407,6 @@ public class SightseeingFragment extends Fragment implements LocationUser, Navig
 		AnimalFinderHelper animalFinderHelper = new AnimalFinderHelper(
 				mLocationUpdater.getLocation(), (MyGuideApp) getActivity()
 						.getApplication(), getActivity());
-						
 
 		AnimalDistance closestAnimal = animalFinderHelper.closestAnimal();
 
@@ -456,7 +455,8 @@ public class SightseeingFragment extends Fragment implements LocationUser, Navig
 			@Override
 			public void onMapClick(LatLng latLng) {
 				clearSearchView();
-				setUpCamera();
+				// optional to change camera
+				// setUpCamera();
 				closeCheckButton(true);
 			}
 		});
@@ -480,6 +480,14 @@ public class SightseeingFragment extends Fragment implements LocationUser, Navig
 						R.layout.info_window_animal, null);
 				TextView txtvHeader = (TextView) infoWindow.findViewById(R.id.txtvHeaderInfoWindow);
 				txtvHeader.setText(marker.getTitle());
+
+				TextView txtvDescription = (TextView) infoWindow
+						.findViewById(R.id.txtvAnimalInfoWindowDescription);
+				txtvDescription.setText(mAnimalMarkersMap.get(marker).getDescriptionAdult() + "");
+
+				ImageView imgvAnimal = (ImageView) infoWindow
+						.findViewById(R.id.imgvInfoWindowAnimal);
+				// TODO set animal info window image
 
 				return infoWindow;
 			}

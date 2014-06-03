@@ -12,13 +12,14 @@
         android:paddingBottom="10dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
-        android:src="@drawable/animal_info" />
+        android:src="@drawable/agatui" />
 
     <TextView
         android:id="@+id/txtvHeaderInfoWindow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/imgvInfoWindowAnimal"
+        android:maxLines="2"
         android:maxWidth="80dip"
         android:paddingLeft="5dp"
         android:paddingTop="10dp"
